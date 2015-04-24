@@ -1,0 +1,16 @@
+---
+EtherSwitchTable:
+    rpc: get-ethernet-switching-table-information
+    item: ethernet-switching-table/mac-table-entry
+    key: 
+        - mac-address
+        - mac-vlan
+    view: EtherSwitchView
+
+EtherSwitchView:
+    fields:
+        address: mac-address
+        vlan: mac-vlan
+        type: mac-type
+        age: mac-age
+        interface: mac-interfaces-list/mac-interfaces
